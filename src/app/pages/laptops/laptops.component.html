@@ -1,0 +1,27 @@
+<div cdkDropList class="row m-2 laptop-list" cdkDropListOrientation="horizontal" (cdkDropListDropped)="drop($event)">
+    <div class="laptop-box col-lg-3" *ngFor="let laptop of laptops" cdkDrag>
+
+        <div class="image">
+            <img class="img-thumbnail border-none" src="./assets/images/{{laptop.image}}">
+        </div>
+
+        <div class="p-1">
+                <a class="text-decoration-none fw-bold fs-5" href="#">
+                    {{laptop.brand}}
+                </a>
+        </div>
+
+        <div class="fw-bold px-1 my-1">
+            {{laptop.specification}}
+        </div>
+        <div class="px-1 my-1">
+                {{laptop.description}}
+        </div>
+
+        <div class="px-1 my-1 text-success">
+            Price: {{laptop.price}}
+        </div>
+    </div>
+  </div>
+
+  <!-- Price: {{laptop.price |currency:'USD':true:'1.0-0'}} -->

@@ -1,0 +1,20 @@
+<mat-toolbar color="primary">
+    <button (click)="toggleSidebar()" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <div class="container-fluid d-flex justify-content-around">
+      <div class="div col-sm-9">
+        <a routerLink="/home" routerLinkActive="active" class="text-decoration-none text-white mx-3">Home</a>
+        <a routerLink="/laptops" routerLinkActive="active" class="text-decoration-none text-white mx-3">Laptop List</a>
+        <a routerLink="/news" routerLinkActive="active" class="text-decoration-none text-white mx-3">News</a>
+        <a routerLink="/todo" routerLinkActive="active" class="text-decoration-none text-white mx-3">To-Do</a>
+      </div>
+
+    <div class="col-sm-3 d-flex justify-content-end">
+      <a routerLink="/contact" routerLinkActive="active" class="text-decoration-none text-white">Contact</a>
+    </div>
+    
+  </div>
+    <span class="example-spacer"></span>
+
+  </mat-toolbar>

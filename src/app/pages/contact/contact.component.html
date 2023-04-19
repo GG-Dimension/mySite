@@ -1,0 +1,14 @@
+<div class="container text-center">
+    <button class="btn btn-success" (click)="displayContent()">Display Details</button>
+    <p *ngIf="content">'Secret Password = tuna'</p>
+
+    <div *ngFor="let logItem of log">{{logItem}}</div>
+</div>
+
+<div class="h2">{{reciver}}</div>
+
+
+
+<hr>
+<app-employee-list></app-employee-list>
+

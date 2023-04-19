@@ -1,0 +1,24 @@
+<h2>To - Do</h2>
+
+<div class="container my-3 p-3">
+    <!-- <app-my-input (newItem)="onAddItem($event)"></app-my-input> -->
+    <app-my-input></app-my-input>
+    <div class="row">
+        <ul>
+        <app-todo-child *ngFor="let gg of laptops; let i = index" [ss]="gg" [itemIndex]="i"></app-todo-child>
+        </ul>
+    </div>
+</div>
+
+
+
+
+
+
+
+<h2 [style.color]="green">{{myNameReciver}}</h2>
+
+
+    
+
+

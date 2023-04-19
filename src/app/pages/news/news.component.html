@@ -1,0 +1,55 @@
+<div class="container">
+    <div class="row">
+    <div class="col-md-12 my-3">
+        
+        <input type="text" class="form-control mb-3" [(ngModel)]="userName" name="" id="">
+        <p>{{userName}}</p>
+        
+        <button class="btn btn-success" [disabled]="userName ===''" (click)="userName =''">Reset</button>
+    </div>
+</div>
+</div>
+
+<br>
+
+<input type="text" name="gigi" id="" class="form-control" [(ngModel)]="inputValue" [disabled]="inputDisabler">
+<div class="form-check form-switch" (change)="onChange()">
+    <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked">
+    <div *ngIf="inputDisabler;  else elseBlock">
+        <label class="form-check-label" for="flexSwitchCheckChecked">Turn input on</label></div>
+        <ng-template #elseBlock>Input is on. You can enter data</ng-template>
+  </div>
+
+<h2>{{inputValue}}</h2>
+<button class="btn btn-primary" (click)="sendData()">Send Data to Contact</button>
+<br>
+<app-contact [reciver]="inputData"></app-contact>
+
+<br>
+<h2 [style.color]="gl ? 'red' : 'green'">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, dignissimos.</h2>
+
+
+<button class="btn btn-primary" (click)="colorChange()">Click to Change color</button>
+<br>
+<br>
+
+
+<select class="form-control" id="" [(ngModel)]="selectedColor">
+    <option>Green</option>
+    <option>Blue</option>
+    <option>Red</option>
+    <option>Violet</option>
+  </select>
+
+
+<div class="container" [ngSwitch]="selectedColor">
+    <h2 *ngSwitchCase="'Green'" [style.color]="green">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, beatae!</h2>
+    <h2 *ngSwitchCase="'Blue'" class="text-primary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, beatae!</h2>
+    <h2 *ngSwitchCase="'Red'" class="text-danger">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, beatae!</h2>
+    <h2 *ngSwitchCase="'Violet'" [style.color]="violet">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, beatae!</h2>
+    <h2 *ngSwitchDefault="''">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, beatae!</h2>
+</div>
+  
+
+
+<!-- <app-todo [myNameReciver]="myName"></app-todo> -->

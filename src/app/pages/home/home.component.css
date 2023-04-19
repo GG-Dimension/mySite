@@ -1,0 +1,15 @@
+.online{
+    color: white;
+}
+
+.red-cube{
+    height: 200px;
+    width: 200px;
+    background-color: red;
+}
+
+.blue-cube{
+    height: 200px;
+    width: 200px;
+    background-color: rgb(7, 11, 230);
+}

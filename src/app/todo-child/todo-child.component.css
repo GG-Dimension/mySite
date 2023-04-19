@@ -1,0 +1,30 @@
+.item{
+    padding:20px;
+    background-color: rgb(101, 215, 95);
+    border: 1px solid rgb(4, 79, 14);
+    color: white;
+    margin: 4px;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.item h4{
+    font-size: 2rem
+}
+
+.item button{
+    border: none;
+    padding:10px;
+    border-radius: 12px;
+}
+
+.item button:hover{
+    background-color: rgb(184, 245, 181);
+}
+
+.done{
+    text-decoration: line-through;
+}
